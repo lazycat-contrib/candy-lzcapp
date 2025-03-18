@@ -1,0 +1,36 @@
+{
+  "name": "Candy",
+  "package": "cloud.lazycat.app.candy",
+  "description": "WebUI 版的 Candy(一个高可用、低时延、反审查的组网工具)服务器",
+  "homepage": "https://github.com/lanthora/candy",
+  "author": "lanthora",
+  "app_features": [
+    "background_task",
+    "public_path"
+  ],
+  "subdomain": "candy",
+  "version": "0.0.1",
+  "public_paths": [
+    "/"
+  ],
+  "iconPath": "icon.png",
+  "composePath": "docker-compose.yml",
+  "unsupported_platforms": [],
+  "lastRouteType": "from_compose",
+  "port_mappings": {
+    "cacao_8080_80": {
+      "use": true,
+      "type": "http",
+      "path": "/",
+      "targetPath": "/"
+    }
+  },
+  "image_docker.io_lanthora_cacao_latest": {
+    "originalImage": "docker.io/lanthora/cacao:latest",
+    "pushTarget": "lazycat",
+    "newImageName": "registry.lazycat.cloud/czyt/lanthora/cacao:3cb73354b69c5561",
+    "timestamp": "2025-03-18T13:13:00.087Z"
+  },
+  "cacao_volume_/var/lib/cacao_action": "emptyDir",
+  "cacao_volume_/var/lib/cacao_location": "app_data"
+}

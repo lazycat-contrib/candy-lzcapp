@@ -1,0 +1,8 @@
+services:
+    cacao:
+        container_name: cacao
+        volumes:
+            - /var/lib/cacao:/var/lib/cacao
+        ports:
+            - 8080:80
+        image: docker.io/lanthora/cacao:latest

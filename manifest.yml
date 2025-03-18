@@ -1,0 +1,23 @@
+lzc-sdk-version: "0.1"
+name: Candy
+package: cloud.lazycat.app.candy
+version: 0.0.1
+description: WebUI 版的 Candy(一个高可用、低时延、反审查的组网工具)服务器
+homepage: https://github.com/lanthora/candy
+author: lanthora
+application:
+  subdomain: candy
+  background_task: true
+  multi_instance: false
+  gpu_accel: false
+  kvm_accel: false
+  usb_accel: false
+  public_path:
+    - /
+  routes:
+    - /=http://cacao.cloud.lazycat.app.candy.lzcapp:80/
+services:
+  cacao:
+    image: docker.hlmirror.com/lanthora/cacao:latest
+    binds:
+      - /lzcapp/var/data:/var/lib/cacao
