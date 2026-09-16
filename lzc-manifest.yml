@@ -1,0 +1,17 @@
+application:
+  subdomain: candy
+  background_task: true
+  multi_instance: false
+  public_path:
+    - /
+
+  upstreams:
+    - location: /
+      backend: http://cacao:80/
+
+services:
+  cacao:
+    # upstream: lanthora/cacao:latest
+    image: lanthora/cacao:latest
+    binds:
+      - /lzcapp/var/data:/var/lib/cacao

@@ -1,0 +1,14 @@
+package: cloud.lazycat.app.candy
+version: 0.0.1
+name: Candy
+description: "WebUI 版的 Candy(一个高可用、低时延、反审查的组网工具)服务器"
+min_os_version: "1.5.0"
+homepage: https://github.com/lanthora/candy
+author: lanthora
+locales:
+  zh:
+    description: "WebUI 版的 Candy(一个高可用、低时延、反审查的组网工具)服务器"
+    name: Candy
+  en:
+    description: "Web UI server for Candy, a high-availability, low-latency, censorship-resistant networking tool"
+    name: Candy
