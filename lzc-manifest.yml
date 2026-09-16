@@ -4,14 +4,12 @@ application:
   multi_instance: false
   public_path:
     - /
-
   upstreams:
     - location: /
       backend: http://cacao:80/
-
 services:
   cacao:
-    # upstream: lanthora/cacao:latest
-    image: lanthora/cacao:latest
+    # upstream: lanthora/cacao:latest@sha256:8ca3937559f58b9b2eb27d5d722ec983fdf3e30f7b589242ba4c6338d96f08d3
+    image: registry.lazycat.cloud/czyt/lanthora/cacao:4cac213de6ce41bd
     binds:
       - /lzcapp/var/data:/var/lib/cacao
