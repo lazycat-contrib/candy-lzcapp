@@ -1,4 +1,5 @@
 package: cloud.lazycat.app.candy
+license: MIT
 version: 0.0.1
 name: Candy
 description: "WebUI 版的 Candy(一个高可用、低时延、反审查的组网工具)服务器"
