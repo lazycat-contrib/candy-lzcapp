@@ -9,7 +9,7 @@ application:
       backend: http://cacao:80/
 services:
   cacao:
-    # upstream: lanthora/cacao:latest@sha256:ea4f7a3346652c8f43f2750d1de96e43dcd8915acd528bc7821fe620c74bfb9d
-    image: registry.lazycat.cloud/czyt/lanthora/cacao:2e0f15095d84b211
+    # upstream: lanthora/cacao:latest@sha256:bb2eef7d74f52b5e257937d8d2b574cf45be381a6d2d7d347503acb51299ed4a
+    image: registry.lazycat.cloud/czyt/lanthora/cacao:8253e5f815ecac6d
     binds:
       - /lzcapp/var/data:/var/lib/cacao
